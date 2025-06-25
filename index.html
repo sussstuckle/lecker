@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsche Süßbrote & Süßstückchen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe0f7 0%, #fff0fa 100%);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #ffb6e6 0%, #ff8ecf 100%);
+            color: #fff;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 16px #ffb6e655;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.7rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #ff8ecf44;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #fffbe6;
+            text-shadow: 0 1px 4px #ff8ecf33;
+        }
+        .showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.2rem;
+            margin: 2.5rem auto;
+            max-width: 1200px;
+        }
+        .bread-card {
+            background: linear-gradient(135deg, #fff0fa 60%, #ffe0f7 100%);
+            border-radius: 2rem;
+            box-shadow: 0 6px 32px #ffb6e655, 0 1.5px 0 #ff8ecf22;
+            position: relative;
+            overflow: hidden;
+        }
+        .bread-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px #d9a06655;
+        }
+        .bread-icon {
+            font-size: 3.5rem;
+            color: #d9a066;
+            margin-bottom: 1rem;
+            transition: color 0.2s;
+        }
+        .bread-card:hover .bread-icon {
+            color: #b87b2b;
+        }
+        .bread-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .bread-desc {
+            font-size: 1rem;
+            color: #6b4f1d;
+            min-height: 60px;
+        }
+        .bread-details {
+            position: absolute;
+            left: 0; right: 0; bottom: -100%;
+            background: #fffbe6;
+            color: #6b4f1d;
+            padding: 1rem;
+            border-radius: 0 0 1.2rem 1.2rem;
+            box-shadow: 0 -2px 12px #d9a06633;
+            transition: bottom 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+            z-index: 2;
+        }
+        .bread-card.active .bread-details {
+            bottom: 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 1.2rem;
+            color: #b87b2b;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deutsche Süßbrote & Süßstückchen</h1>
+        <div class="subtitle">Ein Showcase der leckersten süßen Brote und Gebäckstücke aus Deutschland</div>
+    </header>
+    <main>
+        <section class="showcase">
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-bread-slice"></i></div>
+                <div class="bread-title">Rosinenbrötchen</div>
+                <div class="bread-desc">Weiches Hefebrötchen mit süßen Rosinen.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Das Rosinenbrötchen ist ein Klassiker unter den süßen Broten. Es wird aus Hefeteig gebacken und mit Rosinen verfeinert – perfekt zum Frühstück oder als Snack.
+                </div>
+            </div>
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-croissant"></i></div>
+                <div class="bread-title">Franzbrötchen</div>
+                <div class="bread-desc">Zimtig, buttrig, aus Hamburg.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Das Franzbrötchen ist ein zimtiges, buttriges Hefegebäck aus Norddeutschland, das an ein Croissant erinnert, aber mit Zimt und Zucker gefüllt ist.
+                </div>
+            </div>
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-cookie-bite"></i></div>
+                <div class="bread-title">Streuseltaler</div>
+                <div class="bread-desc">Runder Hefeteig mit Butterstreuseln.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Der Streuseltaler besteht aus einem runden Hefeteig, der mit knusprigen Butterstreuseln und oft mit Zuckerguss verfeinert wird.
+                </div>
+            </div>
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-apple-alt"></i></div>
+                <div class="bread-title">Apfeltasche</div>
+                <div class="bread-desc">Gefülltes Blätterteiggebäck mit Apfel.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Die Apfeltasche ist ein süßes Blätterteiggebäck, gefüllt mit Apfelstückchen und oft mit Zimt abgeschmeckt.
+                </div>
+            </div>
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-seedling"></i></div>
+                <div class="bread-title">Mohnschnecke</div>
+                <div class="bread-desc">Hefeschnecke mit Mohnfüllung.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Die Mohnschnecke ist ein süßes Hefegebäck, das mit einer aromatischen Mohnfüllung gerollt und gebacken wird.
+                </div>
+            </div>
+            <div class="bread-card" onclick="showDetails(this)">
+                <div class="bread-icon"><i class="fas fa-egg"></i></div>
+                <div class="bread-title">Berliner</div>
+                <div class="bread-desc">Gefüllter Krapfen mit Marmelade.</div>
+                <div class="bread-details">
+                    <span class="close-btn" onclick="event.stopPropagation();hideDetails(this)">&times;</span>
+                    Der Berliner ist ein in Fett ausgebackener Krapfen, meist mit Marmelade gefüllt und mit Puderzucker bestäubt – ein Klassiker zu Silvester und Karneval.
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function showDetails(card) {
+            // Alle anderen schließen
+            document.querySelectorAll('.bread-card.active').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            card.classList.add('active');
+        }
+        function hideDetails(btn) {
+            btn.closest('.bread-card').classList.remove('active');
+        }
+        // Optional: Schließen bei Klick außerhalb
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.bread-card')) {
+                document.querySelectorAll('.bread-card.active').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
