@@ -44,41 +44,50 @@
             background: linear-gradient(135deg, #fff0fa 60%, #ffe0f7 100%);
             border-radius: 2rem;
             box-shadow: 0 6px 32px #ffb6e655, 0 1.5px 0 #ff8ecf22;
+            width: 220px;
+            padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.25s, box-shadow 0.25s;
             position: relative;
             overflow: hidden;
+            border: 2.5px solid #ffb6e6;
         }
         .bread-card:hover {
-            transform: translateY(-8px) scale(1.04);
-            box-shadow: 0 8px 32px #d9a06655;
+            transform: translateY(-10px) scale(1.06) rotate(-2deg);
+            box-shadow: 0 12px 48px #ff8ecf77, 0 2px 0 #ffb6e655;
+            border-color: #ff8ecf;
         }
         .bread-icon {
-            font-size: 3.5rem;
-            color: #d9a066;
-            margin-bottom: 1rem;
-            transition: color 0.2s;
+            font-size: 3.7rem;
+            margin-bottom: 1.2rem;
+            transition: transform 0.2s;
+            filter: drop-shadow(0 2px 6px #ffb6e655);
         }
         .bread-card:hover .bread-icon {
-            color: #b87b2b;
+            transform: scale(1.15) rotate(6deg);
         }
         .bread-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
+            color: #e754a6;
+            letter-spacing: 0.5px;
         }
         .bread-desc {
-            font-size: 1rem;
-            color: #6b4f1d;
+            font-size: 1.05rem;
+            color: #b84d8a;
             min-height: 60px;
         }
         .bread-details {
             position: absolute;
             left: 0; right: 0; bottom: -100%;
-            background: #fffbe6;
-            color: #6b4f1d;
-            padding: 1rem;
-            border-radius: 0 0 1.2rem 1.2rem;
-            box-shadow: 0 -2px 12px #d9a06633;
-            transition: bottom 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+            background: #fff0fa;
+            color: #b84d8a;
+            padding: 1.2rem 1rem 1.5rem 1rem;
+            border-radius: 0 0 2rem 2rem;
+            box-shadow: 0 -2px 18px #ffb6e655;
+            transition: bottom 0.5s cubic-bezier(.68,-0.55,.27,1.55);
             z-index: 2;
         }
         .bread-card.active .bread-details {
@@ -86,10 +95,10 @@
         }
         .close-btn {
             position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-            font-size: 1.2rem;
-            color: #b87b2b;
+            top: 0.7rem;
+            right: 1.2rem;
+            font-size: 1.3rem;
+            color: #e754a6;
             cursor: pointer;
         }
     </style>
@@ -102,7 +111,7 @@
     <main>
         <section class="showcase">
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-bread-slice"></i></div>
+                <div class="bread-icon">🍞</div>
                 <div class="bread-title">Rosinenbrötchen</div>
                 <div class="bread-desc">Weiches Hefebrötchen mit süßen Rosinen.</div>
                 <div class="bread-details">
@@ -111,7 +120,7 @@
                 </div>
             </div>
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-croissant"></i></div>
+                <div class="bread-icon">🥐</div>
                 <div class="bread-title">Franzbrötchen</div>
                 <div class="bread-desc">Zimtig, buttrig, aus Hamburg.</div>
                 <div class="bread-details">
@@ -120,7 +129,7 @@
                 </div>
             </div>
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-cookie-bite"></i></div>
+                <div class="bread-icon">🍪</div>
                 <div class="bread-title">Streuseltaler</div>
                 <div class="bread-desc">Runder Hefeteig mit Butterstreuseln.</div>
                 <div class="bread-details">
@@ -129,7 +138,7 @@
                 </div>
             </div>
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-apple-alt"></i></div>
+                <div class="bread-icon">🥧</div>
                 <div class="bread-title">Apfeltasche</div>
                 <div class="bread-desc">Gefülltes Blätterteiggebäck mit Apfel.</div>
                 <div class="bread-details">
@@ -138,7 +147,7 @@
                 </div>
             </div>
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-seedling"></i></div>
+                <div class="bread-icon">🌻</div>
                 <div class="bread-title">Mohnschnecke</div>
                 <div class="bread-desc">Hefeschnecke mit Mohnfüllung.</div>
                 <div class="bread-details">
@@ -147,7 +156,7 @@
                 </div>
             </div>
             <div class="bread-card" onclick="showDetails(this)">
-                <div class="bread-icon"><i class="fas fa-egg"></i></div>
+                <div class="bread-icon">🍩</div>
                 <div class="bread-title">Berliner</div>
                 <div class="bread-desc">Gefüllter Krapfen mit Marmelade.</div>
                 <div class="bread-details">
